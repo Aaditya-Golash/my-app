@@ -8,7 +8,8 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { BookmarkedMoviesComponent } from './bookmarked-movies/bookmarked-movies.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,10 +23,13 @@ import { BookmarkedMoviesComponent } from './bookmarked-movies/bookmarked-movies
     NoopAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [
+    { provide: 'API_KEY', useValue: environment.apiKey }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

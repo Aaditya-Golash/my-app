@@ -1,1 +1,26 @@
-<p>bookmarked-movies works!</p>
+<div *ngIf="bookmarks.length === 0">
+    <p>No bookmarked movies.</p>
+</div>
+
+<div *ngIf="bookmarks.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Poster</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Rating</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of bookmarks">
+          <td><img [src]="movie.Poster" alt="Poster" width="50"></td>
+          <td>{{movie.Title}}</td>
+          <td>{{movie.Year}}</td>
+          <td>{{movie.imdbRating}}</td>
+          <td><button (click)="unbookmarkMovie(movie.imdbID)">Remove from bookmarks</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>

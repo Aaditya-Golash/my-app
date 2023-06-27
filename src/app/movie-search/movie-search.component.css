@@ -1,0 +1,41 @@
+/* movie-search.component.css */
+
+.error {
+    color: red;
+  }
+  
+  form {
+    margin-bottom: 1em;
+  }
+  
+  form input[type="text"] {
+    margin-right: 1em;
+  }
+  
+  .movie-card {
+    display: flex;
+    margin-bottom: 2em;
+    align-items: center;
+  }
+  
+  .movie-card img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 1em;
+  }
+  
+  .movie-card h2 {
+    margin: 0;
+  }
+  
+  .movie-card button {
+    margin-left: auto;
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
